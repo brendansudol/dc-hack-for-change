@@ -1,0 +1,260 @@
+/* Custom fonts
+-------------------------------------------------- */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../../fonts/Montserrat/Montserrat-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../fonts/Montserrat/Montserrat-Hairline.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../../fonts/Montserrat/Montserrat-Regular.otf") format("opentype");
+}
+/* Bootstrap overrides
+-------------------------------------------------- */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    color: #555;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.panel {
+    border-radius: 2px;
+    border: none;
+}
+
+.alert {
+    margin-bottom: 15px;
+    padding: 20px 15px;
+    border: 0;
+}
+
+button:focus,
+button:active {
+    outline: 0;
+}
+
+.form-control {
+    box-shadow: none !important;
+}
+
+.form-control:focus,
+.form-control:active {
+    border-color: #333;
+}
+/* Common elements / base page
+-------------------------------------------------- */
+
+hr.divider {
+    margin: 30px auto 30px auto;
+    border-top: 5px solid #e6e6e6;
+}
+/* ---------------------------------------
+* Navbar 
+*/
+
+.masthead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.masthead a:hover {
+    text-decoration: none
+}
+
+.masthead .masthead-logo {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #000;
+}
+
+.masthead-logo img {
+    float: left;
+    margin-right: 8px;
+    height: 30px;
+    width: auto;
+}
+
+@media (min-width: 768px) {
+    .masthead {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        text-align: left;
+    }
+    .masthead .masthead-logo {
+        float: left;
+    }
+}
+
+.masthead-tagline {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+@media (max-width: 767px) {
+    .masthead-tagline {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid #ebebeb;
+    }
+}
+
+@media (min-width: 768px) {
+    .masthead-tagline {
+        float: right;
+        font-size: 14px;
+    }
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+}
+
+.footer .inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #ebebeb;
+}
+
+.footer p {
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+
+.footer a {
+    color: #999;
+}
+
+/* Map page
+-------------------------------------------------- */
+
+form {
+    margin-bottom: 15px;
+}
+.map-holder {
+    position: relative;
+}
+#map {
+    margin-bottom: 6px;
+    width: 100%;
+    height: 400px;
+}
+.leaflet-popup-content-wrapper {
+    border-radius: 2px;
+}
+.leaflet-popup-tip {
+    width: 12px;
+    height: 12px;
+}
+.mapbox-improve-map,
+.mapbox-logo {
+    display: none;
+}
+#hood-tt {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    background-color: #000;
+    font-size: 12px;
+}
+#hood-tt .inner {
+    padding: 8px;
+}
+.tw-summary {
+    margin-bottom: 30px;
+}
+.tw-by-hood h4 {
+    font-weight: 700;
+}
+.hood-entry {
+    display: block;
+    margin-bottom: 10px;
+    padding: 20px;
+    color: #555;    
+    border: 1px solid #eee;
+}
+.hood-entry:hover,
+.hood-entry:active,
+.hood-entry:focus {
+    color: #000;
+    background-color: #f2f2f2;
+    text-decoration: none;
+}
+.hood-entry .badge {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-weight: 400;
+}
+.tweet-marker:hover {
+    fill-opacity: 0.8;
+}
+
+
+
+
+
+
+
+

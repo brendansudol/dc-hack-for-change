@@ -1,0 +1,55 @@
+{% extends "base.jinja" %}
+
+
+{% block content %}
+<div class="container main">
+    {% if query == '' %}
+    <div class="alert alert-info" role="alert">
+        <strong>Hi there!</strong> Search for a word or phrase below to see if and where Washingtonians are tweeting about it.
+    </div>
+    {% endif %}
+    <form action="/" method="GET">
+        <div class="input-group">
+            <input type="text" class="form-control" name="q" placeholder="Search Twitter (e.g., hungry, lunch, food truck)" value="{{ query }}" autocomplete="off">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">Go!</button>
+            </span>
+        </div>
+    </form>
+    <div class="map-holder">
+        <div id="map"></div>
+        <div id="hood-tt"></div>
+    </div>
+    <div id="tw-details"></div>
+</div>
+{% endblock %}
+
+
+{% block footerjs %}
+<script type="text/html" id="tw-tmpl">
+<p class="tw-summary">
+    <strong><%= ct %></strong> recent, geotagged tweet<%= ct == 1 ? '' : 's' %> containing <strong>"{{ query|e }}"</strong> in Washington, D.C.
+</p>
+
+<% if (ct > 0) { %>
+<div class="tw-by-hood">
+    <h4>Twitter activity by neighborhood</h4>
+    <div class="hood-list">
+    <% for ( var i = 0; i < results.length; i++ ) { %>
+        <% var ct = results[i].value.tweet_ct; %>
+        <a href="#" class="hood-entry" data-id="<%= results[i].key %>">
+            <span class="badge pull-right">
+                <%= ct %> tweet<%= ct > 1 ? 's' : '' %>
+            </span>
+            <div class="hood-name">
+                <%= results[i].value.name %>
+            </div>
+        </a>
+    <% } %>
+    </div>
+</div>
+<% } %>
+</script>
+
+<script>requirejs(['app/map']);</script>
+{% endblock %}
